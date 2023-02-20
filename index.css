@@ -3,34 +3,66 @@ body {
     height: 100%;
     font-family: 'Fredoka One', cursive;
     font-size: 30px;
-    color: #fdefae;
+    color: #f6f1db;
 }
+
 .parallax {
     background-image: url("nolan.jpg");
-    height: 100vh;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-attachment: fixed;
     background-size: cover;
 }
-#container {
+
+.parallax.before {
+    height: 90vh;
+}
+
+.parallax.after {
+    height: 70vh;
+}
+
+.bubble-container {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     height: 90vh;
     width: 80vw;
 }
 
-#text {
-    background-color: #8acdeb;
-    height: 100%;
-    text-align: center;
-    /*padding: 5vh;*/
+.bubble-container.first {
+    top: 50%;
+    left: 50%;
 }
-.drop {
+
+.bubble-container.second {
+    bottom: -10%;
+    left: 50%;
+}
+
+.bubble-container.third  {
+    left: 50%;
+}
+
+#invitation {
+    background-color: #8acdeb;
+    height: fit-content;
+    text-align: center;
+}
+
+#details {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+#details>div {
+    margin: 2vh;
+    font-size: 26px;
+}
+
+.bubble {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -42,7 +74,7 @@ body {
     border: 2px solid #8acdeb;
 }
 
-.drop::before {
+.bubble::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -52,7 +84,7 @@ body {
     box-shadow: -4px 5px 5px #8acdeb, -3px 4px 5px #8acdeb, inset -6px 6px 10px #8acdeb, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
 }
 
-.drop::after {
+.bubble::after {
     content: "";
     position: absolute;
     height: 10px;
@@ -65,53 +97,53 @@ body {
     opacity: 0.8;
 }
 
-@-webkit-keyframes drop1 {
+@-webkit-keyframes bubble1 {
     0% {transform: translateY(0) translateX(0) scale(1); opacity: 1;}
     50% {transform: translateY(-4rem) translateX(-0.5rem) scale(1); opacity: .8;}
     100% {transform: translateY(-6rem) translateX(1rem) scale(1); opacity: 0;}
 }
 
-@-webkit-keyframes drop2 {
+@-webkit-keyframes bubble2 {
     0% {transform: translateY(0) translateX(0) scale(1); opacity: 1;}
     50% {transform: translateY(-2rem) translateX(1rem) scale(1); opacity: .8;}
     100% {transform: translateY(-6rem) translateX(.5rem) scale(1); opacity: 0;}
 }
 
-.drop1 {
+.bubble1 {
     left: 60vw;
     bottom: -4vh;
-    -webkit-animation: drop1 5s ease-in-out infinite;
-    animation: drop1 5s ease-in-out infinite;
+    -webkit-animation: bubble1 5s ease-in-out infinite;
+    animation: bubble1 5s ease-in-out infinite;
 }
 
-.drop2 {
+.bubble2 {
     left: 67vw;
     top: 40vh;
     z-index: -1;
     border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
-    -webkit-animation: drop1 4s ease-in-out infinite;
-    animation: drop1 4s ease-in-out infinite;
+    -webkit-animation: bubble1 4s ease-in-out infinite;
+    animation: bubble1 4s ease-in-out infinite;
 }
 
-.drop3 {
+.bubble3 {
     left: 10vw;
     bottom: -5vh;
-    -webkit-animation: drop2 3s ease-in-out infinite;
-    animation: drop2 3s ease-in-out infinite;
+    -webkit-animation: bubble2 3s ease-in-out infinite;
+    animation: bubble2 3s ease-in-out infinite;
 }
 
-.drop4 {
+.bubble4 {
     left: 20vw;
     top: 30vh;
     z-index: -1;
     border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
-    -webkit-animation: drop2 4s ease-in-out infinite;
-    animation: drop2 4s ease-in-out infinite;
+    -webkit-animation: bubble2 4s ease-in-out infinite;
+    animation: bubble2 4s ease-in-out infinite;
 }
 
-.drop5 {
+.bubble5 {
     left: 5vw;
     bottom: 30vh;
-    -webkit-animation: drop1 4s ease-in-out infinite;
-    animation: drop1 4s ease-in-out infinite;
+    -webkit-animation: bubble1 4s ease-in-out infinite;
+    animation: bubble1 4s ease-in-out infinite;
 }
