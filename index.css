@@ -8,22 +8,21 @@ body {
 
 .parallax {
     background-image: url("nolan.jpg");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    border: #efede8 4px solid;
 }
 
 .parallax.before {
-    height: 60vh;
+    height: 70vh;
+    border-radius: max(0px, min(16px, (100% - 400px + 1px) * 9999)) / 16px;
+
 }
 
 .parallax.after {
-    height: 50vh;
-}
-
-.parallax.last {
-    height: 20vh;
+    height: 70vh;
+    border-radius: max(0px, min(16px, (100% - 400px + 1px) * 9999)) / 16px;
 }
 
 .bubble-container {
@@ -63,14 +62,13 @@ body {
 
 #invitation>p {
     font-size: 30px;
-    margin: 20px;
 }
 
 #details {
     font-family: 'Poppins', sans-serif;
-    padding: 2vh;
     height: 100%;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 #details p {
@@ -81,12 +79,22 @@ body {
     position: absolute;
     top: 55%;
     left: 50%;
-    height: 50px;
-    width: 50px;
+    height: 4.5vw;
+    width: 4.5vw;
     background: #8acdeb;
     border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
     opacity: 0.8;
     border: 2px solid #8acdeb;
+}
+
+.bubble.medium {
+    height: 5.5vw;
+    width: 5.5vw;
+}
+
+.bubble.large {
+    height: 6.5vw;
+    width: 6.5vw;
 }
 
 .bubble::before {
@@ -94,9 +102,9 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: #318CFE;
+    background: rgba(78, 190, 250, 0.89);
     border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
-    box-shadow: -4px 5px 5px #8acdeb, -3px 4px 5px #8acdeb, inset -6px 6px 10px #8acdeb, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
+    box-shadow: -4px 5px 5px #8acdeb, -3px 4px 5px #8acdeb, inset -6px 6px 10px #8acdeb, inset 2px 6px 10px rgba(26, 168, 229, 0.68), inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
 }
 
 .bubble::after {
@@ -113,13 +121,13 @@ body {
 }
 
 @-webkit-keyframes bubble1 {
-    0% {transform: translateY(0) translateX(0) scale(1); opacity: 1;}
+    0% {transform: translateY(0) translateX(0) scale(1); opacity: .9;}
     50% {transform: translateY(-4rem) translateX(-0.5rem) scale(1); opacity: .8;}
     100% {transform: translateY(-6rem) translateX(1rem) scale(1); opacity: 0;}
 }
 
 @-webkit-keyframes bubble2 {
-    0% {transform: translateY(0) translateX(0) scale(1); opacity: 1;}
+    0% {transform: translateY(0) translateX(0) scale(1); opacity: .9;}
     50% {transform: translateY(-2rem) translateX(1rem) scale(1); opacity: .8;}
     100% {transform: translateY(-6rem) translateX(.5rem) scale(1); opacity: 0;}
 }
