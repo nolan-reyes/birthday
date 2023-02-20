@@ -62,6 +62,12 @@ body {
 
 #invitation>p {
     font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#invitation>h2 {
+    margin-top: 20px;
+    margin-bottom: 60px;
 }
 
 #details {
@@ -169,4 +175,30 @@ body {
     bottom: 30vh;
     -webkit-animation: bubble1 4s ease-in-out infinite;
     animation: bubble1 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
+
+.arrow {
+    position: absolute;
+    border: solid rgba(255, 255, 255, 0.44);
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: -50px;
+    transform: rotateZ(45deg);
+    box-shadow: 4px 4px 2px 1px rgba(26, 168, 229, 0.68);
+    opacity: 50%;
+}
+
+.arrow.down {
+    animation: glow 3s ease-out 3;
 }
