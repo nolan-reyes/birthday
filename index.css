@@ -2,7 +2,7 @@ body {
     background: #8acdeb;
     height: 100%;
     font-family: 'Fredoka One', cursive;
-    font-size: 30px;
+    font-size: 40px;
     color: #f6f1db;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .parallax.before {
-    height: 90vh;
+    height: 80vh;
 }
 
 .parallax.after {
@@ -51,15 +51,22 @@ body {
     text-align: center;
 }
 
+#invitation>p {
+    font-size: 30px;
+    margin: 20px;
+}
+
 #details {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: space-evenly;
+    margin: 2vh 1vw;
     height: 100%;
 }
 
-#details>div {
-    margin: 2vh;
-    font-size: 26px;
+#details p {
+    margin: 10px;
+    font-size: 28px;
 }
 
 .bubble {
