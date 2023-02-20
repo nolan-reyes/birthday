@@ -15,15 +15,19 @@ body {
 }
 
 .parallax.before {
-    height: 80vh;
+    height: 60vh;
 }
 
 .parallax.after {
-    height: 70vh;
+    height: 50vh;
+}
+
+.parallax.last {
+    height: 20vh;
 }
 
 .bubble-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
     transform: translate(-50%, -50%);
@@ -32,17 +36,23 @@ body {
 }
 
 .bubble-container.first {
-    top: 50%;
-    left: 50%;
+    left: 50vw;
+    top: 50vh;
 }
 
 .bubble-container.second {
-    bottom: -10%;
-    left: 50%;
+    left: 50vw;
+    bottom: 10vh;
 }
 
 .bubble-container.third  {
-    left: 50%;
+    left: 40vw;
+    bottom: 20vh;
+}
+
+.bubble-container.fourth  {
+    left: 60vw;
+    top: 5vh;
 }
 
 #invitation {
@@ -58,14 +68,12 @@ body {
 
 #details {
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2vh 1vw;
+    padding: 2vh;
     height: 100%;
+    text-align: center;
 }
 
 #details p {
-    margin: 10px;
     font-size: 28px;
 }
 
