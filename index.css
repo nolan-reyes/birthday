@@ -7,22 +7,26 @@ body {
 }
 
 .parallax {
+    text-align: center;
+    overflow: hidden;
     background-image: url("nolan.jpg");
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     border: #efede8 4px solid;
 }
 
 .parallax.before {
-    height: 70vh;
-    border-radius: max(0px, min(16px, (100% - 400px + 1px) * 9999)) / 16px;
+    border-radius: max(0px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
+}
 
+img {
+    opacity: 0;
+    height: 80vh;
 }
 
 .parallax.after {
-    height: 70vh;
-    border-radius: max(0px, min(16px, (100% - 400px + 1px) * 9999)) / 16px;
+    border-radius: max(0px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
 }
 
 .bubble-container {
@@ -179,7 +183,8 @@ body {
 
 @keyframes glow {
     50% {
-        opacity: 100%;
+        opacity: 120%;
+        scale: 1.4;
     }
     100% {
         opacity: 50%;
