@@ -10,23 +10,20 @@ body {
     text-align: center;
     overflow: hidden;
     background-image: url("nolan.jpg");
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    border: #efede8 4px solid;
+    background-position-y: 20%;
 }
 
 .parallax.before {
-    border-radius: max(0px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
+    border: #efede8 5px solid;
+    border-radius: max(32px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
 }
 
 img {
     opacity: 0;
-    height: 80vh;
-}
-
-.parallax.after {
-    border-radius: max(0px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
+    height: 70vh;
 }
 
 .bubble-container {
@@ -79,6 +76,9 @@ img {
     height: 100%;
     text-align: center;
     padding-bottom: 20px;
+    margin: 1vh 0 10vh 0;
+    border: #efede8 5px solid;
+    border-radius: max(32px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
 }
 
 #details p {
