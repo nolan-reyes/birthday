@@ -74,6 +74,8 @@ img {
 #details {
     font-family: 'Poppins', sans-serif;
     height: 100%;
+    z-index: 2;
+    position: relative;
     text-align: center;
     padding-bottom: 20px;
     margin: 1vh 0 10vh 0;
@@ -81,8 +83,14 @@ img {
     border-radius: max(32px, min(32px, (100% - 400px + 1px) * 9999)) / 32px;
 }
 
-#details p {
-    font-size: 36px;
+a {
+    text-decoration: none;
+    color: #f6f1db;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #efede8
 }
 
 .bubble {
